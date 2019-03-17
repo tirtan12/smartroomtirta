@@ -1,0 +1,42 @@
+import RPi.GPIO as GPIO
+
+import time
+
+
+GPIO.setmode(GPIO.BOARD)
+
+pin_number = 7
+GPIO.setup(pin_number, GPIO.OUT)
+
+frequency_hertz = 50
+pwm = GPIO.PWM(pin_number, frequency_hertz)
+
+#left_position = 0.40
+#right_position = 12.5
+#middle_position = (right_position - left_position) / 2 + left_position
+
+
+
+#positionList = [left_position, middle_position, right_position, middle_position]
+#posisi = 12.5
+#sisi = [posisi]
+#ms_per_cycle = 1000 / frequency_hertz
+
+
+for i in range(1):
+        #for position in sisi: #positionList:
+        #       duty_cycle_percentage = position * 100 / ms_per_cycle
+        #       print("Position: " + str(position))
+        #       print("Duty Cycle: " + str(duty_cycle_percentage))
+        #       print(""))
+        #       pwm.start(duty_cycle_percentage)
+                pwm.start(2.5)  
+                time.sleep(.5)
+
+
+
+pwm.stop()
+
+
+GPIO.cleanup()
+####scrips Servo
